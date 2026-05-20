@@ -40,7 +40,7 @@ export const translations = {
     about: {
       title: 'About Paballelo High School',
       subtitle: 'Building Leaders for Tomorrow',
-      description: 'Located in the heart of Paballelo Township in Upington, Paballelo High School is one of the leading public secondary schools in the Northern Cape. The school has played a significant role in educating and empowering generations of learners from the local community through quality education, discipline, sports, culture, and leadership development.',
+      description: 'Paballelo High School is an Urban Public school based in Paballelo Township, Upington, Northern Cape. We serve learners from Grade 8 to Grade 12 and are one of the leading public secondary schools in the region. The school has played a significant role in educating and empowering generations of learners from the local community through quality education, discipline, sports, culture, and leadership development.',
       mission: 'Our Mission',
       missionText: 'To provide accessible, quality education that empowers learners academically, socially, and morally while preparing them for higher education and the workplace.',
       vision: 'Our Vision',

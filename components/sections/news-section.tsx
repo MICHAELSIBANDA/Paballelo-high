@@ -1,11 +1,22 @@
 'use client';
 
 import Link from 'next/link';
-import { ArrowRight, Calendar, Trophy, Music, GraduationCap, Laptop } from 'lucide-react';
+import { ArrowRight, Calendar, Trophy, Music, GraduationCap, Laptop, PartyPopper } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/context/language-context';
 
 const newsItems = [
+  {
+    id: 0,
+    icon: PartyPopper,
+    date: 'May 2026',
+    category: 'Celebration',
+    link: 'https://www.facebook.com/people/Paballelo-High-School/61558234076140/',
+    titleEn: 'Halala! Paballelo High School Celebrates Achievement - Join Our 659+ Community Followers',
+    titleXh: 'Halala! Isikolo Samabanga Aphakamileyo sasePaballelo Sibhiyozela Impumelelo - Joyina Abalandeli Abangaphezulu kwe-659',
+    titleAf: 'Halala! Paballelo Hoerskool Vier Prestasie - Sluit Aan by Ons 659+ Gemeenskapvolgelinge',
+    titleTn: 'Halala! Sekolo se Segolo sa Paballelo se Keteka Katlego - Kopana le Balatedi ba 659+ ba Setshaba',
+  },
   {
     id: 1,
     icon: GraduationCap,
@@ -115,7 +126,7 @@ export function NewsSection() {
         {/* View All */}
         <div className="text-center mt-12">
           <Button asChild variant="outline" className="border-border hover:bg-muted">
-            <Link href="https://educationsouthafrica.com/schools/northern-cape/upington/paballelo-high-school" target="_blank" rel="noopener noreferrer">
+            <Link href="https://www.facebook.com/people/Paballelo-High-School/61558234076140/" target="_blank" rel="noopener noreferrer">
               {t.news.viewAll}
               <ArrowRight className="ml-2 h-4 w-4" />
             </Link>

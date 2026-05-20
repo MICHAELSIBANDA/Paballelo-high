@@ -1,7 +1,8 @@
 'use client';
 
 import { useState } from 'react';
-import { MapPin, Phone, Mail, Clock, Send } from 'lucide-react';
+import Link from 'next/link';
+import { MapPin, Phone, Mail, Clock, Send, Facebook } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -86,6 +87,24 @@ export function ContactSection() {
                   <p className="text-muted-foreground text-sm font-medium">Paballelo Township</p>
                   <p className="text-xs text-muted-foreground mt-1">Upington, Northern Cape</p>
                 </div>
+              </div>
+            </div>
+
+            {/* Facebook Follow */}
+            <div className="mt-6 p-4 rounded-xl bg-card border border-border">
+              <div className="flex items-center gap-3">
+                <div className="p-3 rounded-lg bg-[#1877F2]/10 flex-shrink-0">
+                  <Facebook className="h-5 w-5 text-[#1877F2]" />
+                </div>
+                <div className="flex-1">
+                  <h4 className="font-semibold text-foreground text-sm">Follow us on Facebook</h4>
+                  <p className="text-muted-foreground text-xs">Join our 659+ followers for updates</p>
+                </div>
+                <Button asChild size="sm" className="bg-[#1877F2] hover:bg-[#1877F2]/90 text-white">
+                  <Link href="https://www.facebook.com/people/Paballelo-High-School/61558234076140/" target="_blank" rel="noopener noreferrer">
+                    Follow
+                  </Link>
+                </Button>
               </div>
             </div>
           </div>
