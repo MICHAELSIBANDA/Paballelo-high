@@ -1,7 +1,9 @@
-'use client';
+
+"use client";
 
 import { useState } from 'react';
-import { MapPin, Phone, Mail, Clock, Send } from 'lucide-react';
+import Link from 'next/link';
+import { MapPin, Phone, Mail, Clock, Send, Facebook } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -78,14 +80,35 @@ export function ContactSection() {
               ))}
             </div>
 
-            {/* Map Placeholder */}
-            <div className="mt-8 aspect-video rounded-2xl bg-card border border-border overflow-hidden">
-              <div className="w-full h-full flex items-center justify-center bg-muted/50">
-                <div className="text-center p-6">
-                  <MapPin className="h-12 w-12 text-primary mx-auto mb-3" />
-                  <p className="text-muted-foreground text-sm font-medium">Paballelo Township</p>
-                  <p className="text-xs text-muted-foreground mt-1">Upington, Northern Cape</p>
+            {/* Google Map Embed Container */}
+            <div className="mt-8 aspect-video rounded-2xl bg-card border border-border overflow-hidden isolation-blur">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!3m2!1sen!2sza!4v1781870610736!5m2!1sen!2sza!6m8!1m7!1s7w_WkMrpTOu0p64ADnOoNg!2m2!1d-28.43622766213476!2d21.21334628052614!3f84.11501576537343!4f-10.153137258179171!5f0.7820865974627469" 
+                width="100%" 
+                height="100%" 
+                style={{ border: 0 }} 
+                allowFullScreen={true}
+                loading="lazy" 
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Paballelo High School Map Location"
+              ></iframe>
+            </div>
+
+            {/* Facebook Follow */}
+            <div className="mt-6 p-4 rounded-xl bg-card border border-border">
+              <div className="flex items-center gap-3">
+                <div className="p-3 rounded-lg bg-[#1877F2]/10 flex-shrink-0">
+                  <Facebook className="h-5 w-5 text-[#1877F2]" />
                 </div>
+                <div className="flex-1">
+                  <h4 className="font-semibold text-foreground text-sm">Follow us on Facebook</h4>
+                  <p className="text-muted-foreground text-xs">Join our 659+ followers for updates</p>
+                </div>
+                <Button asChild size="sm" className="bg-[#1877F2] hover:bg-[#1877F2]/90 text-white">
+                  <Link href="https://www.facebook.com/people/Paballelo-High-School/61558234076140/" target="_blank" rel="noopener noreferrer">
+                    Follow
+                  </Link>
+                </Button>
               </div>
             </div>
           </div>

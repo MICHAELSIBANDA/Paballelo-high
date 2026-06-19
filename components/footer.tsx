@@ -9,16 +9,17 @@ export function Footer() {
   const { t } = useLanguage();
 
   const quickLinks = [
-    { href: '#home', label: t.nav.home },
-    { href: '#about', label: t.nav.about },
-    { href: '#academics', label: t.nav.academics },
-    { href: '#admissions', label: t.nav.admissions },
-    { href: '#news', label: t.nav.news },
-    { href: '#contact', label: t.nav.contact },
+    { href: '/#home', label: t.nav.home },
+    { href: '/#about', label: t.nav.about },
+    { href: '/#academics', label: t.nav.academics },
+    { href: '/#admissions', label: t.nav.admissions },
+    { href: '/#news', label: t.nav.news },
+    { href: '/gallery', label: t.nav.gallery },
+    { href: '/#contact', label: t.nav.contact },
   ];
 
   const socialLinks = [
-    { icon: Facebook, href: '#', label: 'Facebook' },
+    { icon: Facebook, href: 'https://www.facebook.com/people/Paballelo-High-School/61558234076140/', label: 'Facebook' },
     { icon: Twitter, href: '#', label: 'Twitter' },
     { icon: Instagram, href: '#', label: 'Instagram' },
     { icon: Linkedin, href: '#', label: 'LinkedIn' },

@@ -1,14 +1,26 @@
 'use client';
 
 import Link from 'next/link';
-import { ArrowRight, Calendar, Trophy, Music, GraduationCap, Laptop } from 'lucide-react';
+import Image from 'next/image'; // 1. Imported Next.js Image component
+import { ArrowRight, Calendar } from 'lucide-react'; // Cleaned up unused icon imports
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/context/language-context';
 
 const newsItems = [
   {
+    id: 0,
+    imageSrc: '/gallery/1.jpg', // 2. Swapped icon for a local image path
+    date: 'May 2026',
+    category: 'Celebration',
+    link: 'https://www.facebook.com/people/Paballelo-High-School/61558234076140/',
+    titleEn: 'Halala! Paballelo High School Celebrates Achievement - Join Our 659+ Community Followers',
+    titleXh: 'Halala! Isikolo Samabanga Aphakamileyo sasePaballelo Sibhiyozela Impumelelo - Joyina Abalandeli Abangaphezulu kwe-659',
+    titleAf: 'Halala! Paballelo Hoerskool Vier Prestasie - Sluit Aan by Ons 659+ Gemeenskapvolgelinge',
+    titleTn: 'Halala! Sekolo se Segolo sa Paballelo se Keteka Katlego - Kopana le Balatedi ba 659+ ba Setshaba',
+  },
+  {
     id: 1,
-    icon: GraduationCap,
+    imageSrc: '/gallery/11.jpg',
     date: 'January 2025',
     category: 'Achievement',
     link: 'https://schoolsdigest.co.za/matriculation/paballelo-high-school-2025-matric-results/',
@@ -19,7 +31,7 @@ const newsItems = [
   },
   {
     id: 2,
-    icon: Laptop,
+    imageSrc: '/gallery/3.jpg',
     date: 'May 2026',
     category: 'Sports',
     link: 'https://www.gov.za/news/speeches/deputy-minister-nonceba-mhlauli-cyber-lab-handover-paballelo-senior-secondary-school',
@@ -30,7 +42,7 @@ const newsItems = [
   },
   {
     id: 3,
-    icon: Music,
+    imageSrc: '/gallery/6.jpg',
     date: 'September 2025',
     category: 'Choir',
     link: 'https://www.youtube.com/watch?v=GxGzbp1-ySA',
@@ -77,9 +89,15 @@ export function NewsSection() {
               key={item.id}
               className="group p-6 rounded-2xl bg-card border border-border hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
             >
-              {/* Icon */}
-              <div className="aspect-video rounded-xl bg-primary/10 flex items-center justify-center mb-5">
-                <item.icon className="h-16 w-16 text-primary" />
+              {/* Image Container */}
+              <div className="aspect-video rounded-xl overflow-hidden bg-muted relative mb-5">
+                <Image 
+                  src={item.imageSrc} 
+                  alt={item.titleEn}
+                  fill
+                  sizes="(max-w-768px) 100vw, (max-w-1200px) 50vw, 33vw"
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                />
               </div>
 
               {/* Meta */}
@@ -115,7 +133,7 @@ export function NewsSection() {
         {/* View All */}
         <div className="text-center mt-12">
           <Button asChild variant="outline" className="border-border hover:bg-muted">
-            <Link href="https://educationsouthafrica.com/schools/northern-cape/upington/paballelo-high-school" target="_blank" rel="noopener noreferrer">
+            <Link href="https://www.facebook.com/people/Paballelo-High-School/61558234076140/" target="_blank" rel="noopener noreferrer">
               {t.news.viewAll}
               <ArrowRight className="ml-2 h-4 w-4" />
             </Link>

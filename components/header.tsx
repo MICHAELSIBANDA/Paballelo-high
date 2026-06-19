@@ -32,12 +32,13 @@ export function Header() {
   }, []);
 
   const navItems = [
-    { href: '#home', label: t.nav.home },
-    { href: '#about', label: t.nav.about },
-    { href: '#academics', label: t.nav.academics },
-    { href: '#admissions', label: t.nav.admissions },
-    { href: '#news', label: t.nav.news },
-    { href: '#contact', label: t.nav.contact },
+    { href: '/#home', label: t.nav.home },
+    { href: '/#about', label: t.nav.about },
+    { href: '/#academics', label: t.nav.academics },
+    { href: '/#admissions', label: t.nav.admissions },
+    { href: '/#news', label: t.nav.news },
+    { href: '/gallery', label: t.nav.gallery },
+    { href: '/#contact', label: t.nav.contact },
   ];
 
   return (

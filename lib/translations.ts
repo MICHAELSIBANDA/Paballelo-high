@@ -17,8 +17,27 @@ export const translations = {
       sportsculture: 'Sports & Culture',
       admissions: 'Admissions',
       news: 'News & Events',
+      gallery: 'Gallery',
       contact: 'Contact',
       apply: 'Apply Now',
+    },
+    // Gallery
+    gallery: {
+      title: 'Gallery',
+      subtitle: 'Moments From Our School Community',
+      description: 'A glimpse into life at Paballelo High School - our learners, events, celebrations, sports, and cultural activities. Photos from our Facebook community.',
+      backHome: 'Back to Home',
+      viewFacebook: 'See More on Facebook',
+      emptyTitle: 'Photos Coming Soon',
+      emptyText: 'We are gathering the latest photos from our Facebook page. Check back soon to see moments from our school community.',
+      categories: {
+        all: 'All',
+        events: 'Events',
+        sports: 'Sports',
+        culture: 'Culture',
+        academics: 'Academics',
+        community: 'Community',
+      },
     },
     // Hero
     hero: {
@@ -40,7 +59,7 @@ export const translations = {
     about: {
       title: 'About Paballelo High School',
       subtitle: 'Building Leaders for Tomorrow',
-      description: 'Located in the heart of Paballelo Township in Upington, Paballelo High School is one of the leading public secondary schools in the Northern Cape. The school has played a significant role in educating and empowering generations of learners from the local community through quality education, discipline, sports, culture, and leadership development.',
+      description: 'Paballelo High School is an Urban Public school based in Paballelo Township, Upington, Northern Cape. We serve learners from Grade 8 to Grade 12 and are one of the leading public secondary schools in the region. The school has played a significant role in educating and empowering generations of learners from the local community through quality education, discipline, sports, culture, and leadership development.',
       mission: 'Our Mission',
       missionText: 'To provide accessible, quality education that empowers learners academically, socially, and morally while preparing them for higher education and the workplace.',
       vision: 'Our Vision',
@@ -139,8 +158,27 @@ export const translations = {
       sportsculture: 'Imidlalo Nenkcubeko',
       admissions: 'Ubhaliso',
       news: 'Iindaba Neziganeko',
+      gallery: 'Igalari',
       contact: 'Qhagamshelana',
       apply: 'Faka Isicelo',
+    },
+    // Gallery
+    gallery: {
+      title: 'Igalari',
+      subtitle: 'Imizuzu Yoluntu Lwesikolo Sethu',
+      description: 'Ukujonga ubomi eSikolo Samabanga Aphakamileyo sasePaballelo - abafundi bethu, iziganeko, imibhiyozo, imidlalo, kunye nemisebenzi yenkcubeko. Iifoto ezivela kuluntu lwethu lwaseFacebook.',
+      backHome: 'Buyela Ekhaya',
+      viewFacebook: 'Bona Okungakumbi kuFacebook',
+      emptyTitle: 'Iifoto Ziyeza Kungekudala',
+      emptyText: 'Siqokelela iifoto zakutsha nje kwiphepha lethu leFacebook. Buyela kungekudala ukubona imizuzu yoluntu lwesikolo sethu.',
+      categories: {
+        all: 'Konke',
+        events: 'Iziganeko',
+        sports: 'Imidlalo',
+        culture: 'Inkcubeko',
+        academics: 'Imfundo',
+        community: 'Uluntu',
+      },
     },
     // Hero
     hero: {
@@ -261,8 +299,27 @@ export const translations = {
       sportsculture: 'Sport & Kultuur',
       admissions: 'Toelating',
       news: 'Nuus & Gebeure',
+      gallery: 'Galery',
       contact: 'Kontak',
       apply: 'Doen Aansoek',
+    },
+    // Gallery
+    gallery: {
+      title: 'Galery',
+      subtitle: 'Oomblikke Uit Ons Skoolgemeenskap',
+      description: 'n Blik op die lewe by Paballelo Hoerskool - ons leerders, gebeure, vieringe, sport en kulturele aktiwiteite. Fotos uit ons Facebook-gemeenskap.',
+      backHome: 'Terug na Tuis',
+      viewFacebook: 'Sien Meer op Facebook',
+      emptyTitle: 'Fotos Kom Binnekort',
+      emptyText: 'Ons versamel die nuutste fotos van ons Facebook-bladsy. Kom binnekort terug om oomblikke uit ons skoolgemeenskap te sien.',
+      categories: {
+        all: 'Alles',
+        events: 'Gebeure',
+        sports: 'Sport',
+        culture: 'Kultuur',
+        academics: 'Akademie',
+        community: 'Gemeenskap',
+      },
     },
     // Hero
     hero: {
@@ -383,8 +440,27 @@ export const translations = {
       sportsculture: 'Metshameko le Setso',
       admissions: 'Kamogelo',
       news: 'Dikgang le Ditiragalo',
+      gallery: 'Pokoso ya Ditshwantsho',
       contact: 'Ikgolaganye',
       apply: 'Dira Kopo',
+    },
+    // Gallery
+    gallery: {
+      title: 'Pokoso ya Ditshwantsho',
+      subtitle: 'Dinako tsa Setshaba sa Sekolo sa Rona',
+      description: 'Tebelelo ya botshelo kwa Sekolong se Segolo sa Paballelo - baithuti ba rona, ditiragalo, meletlo, metshameko, le ditiro tsa setso. Ditshwantsho go tswa mo setshabeng sa rona sa Facebook.',
+      backHome: 'Boela Gae',
+      viewFacebook: 'Bona Gole Gontsi mo Facebook',
+      emptyTitle: 'Ditshwantsho di a Tla',
+      emptyText: 'Re kgobokanya ditshwantsho tse di sa tswang go nna mo tsebeng ya rona ya Facebook. Boela gape go bona dinako tsa setshaba sa sekolo sa rona.',
+      categories: {
+        all: 'Tsotlhe',
+        events: 'Ditiragalo',
+        sports: 'Metshameko',
+        culture: 'Setso',
+        academics: 'Thuto',
+        community: 'Setshaba',
+      },
     },
     // Hero
     hero: {
