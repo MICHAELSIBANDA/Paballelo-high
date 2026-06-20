@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { ArrowRight, Target, Eye, History } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/context/language-context';
@@ -70,30 +71,66 @@ export function AboutSection() {
           {/* Right Image Grid */}
           <div className="grid grid-cols-2 gap-4">
             <div className="space-y-4">
-              <div className="aspect-[4/5] rounded-2xl bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center overflow-hidden">
-                <div className="text-center p-6">
-                  <div className="font-serif text-6xl font-bold text-primary mb-2">50+</div>
-                  <div className="text-sm text-muted-foreground">Years of Excellence</div>
+              <div className="aspect-[4/5] rounded-2xl relative overflow-hidden group">
+                <Image
+                  src="/gallery/1.jpg"
+                  alt="Years of Excellence"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="text-center p-6">
+                    <div className="font-serif text-6xl font-bold text-white mb-2">50+</div>
+                    <div className="text-sm text-white/90">Years of Excellence</div>
+                  </div>
                 </div>
               </div>
-              <div className="aspect-square rounded-2xl bg-primary/10 flex items-center justify-center">
-                <div className="text-center p-4">
-                  <History className="h-12 w-12 text-primary mx-auto mb-2" />
-                  <div className="text-xs text-muted-foreground">Community Heritage</div>
+              <div className="aspect-square rounded-2xl relative overflow-hidden group">
+                <Image
+                  src="/gallery/8.jpg"
+                  alt="Community Heritage"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="text-center p-4">
+                    <History className="h-12 w-12 text-white mx-auto mb-2" />
+                    <div className="text-xs text-white/90">Community Heritage</div>
+                  </div>
                 </div>
               </div>
             </div>
             <div className="space-y-4 pt-8">
-              <div className="aspect-square rounded-2xl bg-secondary/20 flex items-center justify-center">
-                <div className="text-center p-4">
-                  <Target className="h-12 w-12 text-primary mx-auto mb-2" />
-                  <div className="text-xs text-muted-foreground">Academic Focus</div>
+              <div className="aspect-square rounded-2xl relative overflow-hidden group">
+                <Image
+                  src="/gallery/2.jpg"
+                  alt="Academic Focus"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="text-center p-4">
+                    <Target className="h-12 w-12 text-white mx-auto mb-2" />
+                    <div className="text-xs text-white/90">Academic Focus</div>
+                  </div>
                 </div>
               </div>
-              <div className="aspect-[4/5] rounded-2xl bg-gradient-to-br from-primary/30 to-primary/10 flex items-center justify-center overflow-hidden">
-                <div className="text-center p-6">
-                  <div className="font-serif text-5xl font-bold text-primary mb-2">88.7%</div>
-                  <div className="text-sm text-muted-foreground">2025 Pass Rate</div>
+              <div className="aspect-[4/5] rounded-2xl relative overflow-hidden group">
+                <Image
+                  src="/gallery/3.jpg"
+                  alt="2025 Pass Rate"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="text-center p-6">
+                    <div className="font-serif text-5xl font-bold text-white mb-2">88.7%</div>
+                    <div className="text-sm text-white/90">2025 Pass Rate</div>
+                  </div>
                 </div>
               </div>
             </div>

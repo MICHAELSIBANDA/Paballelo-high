@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "src": "/gallery/1.jpg",
+    "category": "events",
+    "captionEn": "School Celebration",
+    "captionXh": "Umbhiyozo Wesikolo",
+    "captionAf": "Skool Viering",
+    "captionTn": "Tiro ya Sekolo",
+    "featured": true
+  },
+  {
+    "id": 2,
+    "src": "/gallery/2.jpg",
+    "category": "academics",
+    "captionEn": "Matric Achievers 2025",
+    "captionXh": "Abaphumeleleyo BeMatriki 2025",
+    "captionAf": "Matriek Prestasie 2025",
+    "captionTn": "Baithuti ba Baatlegileng ba 2025",
+    "featured": true
+  },
+  {
+    "id": 3,
+    "src": "/gallery/3.jpg",
+    "category": "sports",
+    "captionEn": "Sports Day",
+    "captionXh": "Usuku Lweemidlalo",
+    "captionAf": "Sportdag",
+    "captionTn": "Letsatsi la Metshameko",
+    "featured": true
+  },
+  {
+    "id": 4,
+    "src": "/gallery/4.jpg",
+    "category": "culture",
+    "captionEn": "Choir Performance",
+    "captionXh": "Ukuveliswa Kwekwayara",
+    "captionAf": "Koor Opvoering",
+    "captionTn": "Tiro ya Khwaere",
+    "featured": false
+  },
+  {
+    "id": 5,
+    "src": "/gallery/5.jpg",
+    "category": "community",
+    "captionEn": "Community Event",
+    "captionXh": "Isiganeko Soluntu",
+    "captionAf": "Gemeenskapsgebeur",
+    "captionTn": "Tiragalo ya Setshaba",
+    "featured": false
+  },
+  {
+    "id": 6,
+    "src": "/gallery/6.jpg",
+    "category": "academics",
+    "captionEn": "Cyber Lab Handover",
+    "captionXh": "Ukunikezwa KweLabha yeKhompyutha",
+    "captionAf": "Siber Laboratorium Oorhandiging",
+    "captionTn": "Tshwara ditirelong tsa Khomputa",
+    "featured": false
+  },
+  {
+    "id": 7,
+    "src": "/gallery/7.jpg",
+    "category": "events",
+    "captionEn": "Awards Ceremony",
+    "captionXh": "Umngcwabo Wemiklomo",
+    "captionAf": "Toekenningseremonie",
+    "captionTn": "Tiro ya Dikgato",
+    "featured": false
+  },
+  {
+    "id": 8,
+    "src": "/gallery/8.jpg",
+    "category": "culture",
+    "captionEn": "Heritage Day",
+    "captionXh": "Usuku Lwamveli",
+    "captionAf": "Erfenisdag",
+    "captionTn": "Letsatsi la Boswa",
+    "featured": false
+  },
+  {
+    "id": 9,
+    "src": "/gallery/9.jpg",
+    "category": "sports",
+    "captionEn": "Athletics",
+    "captionXh": "Ukugijima",
+    "captionAf": "Atletiek",
+    "captionTn": "Tsamaiso",
+    "featured": false
+  }
+]

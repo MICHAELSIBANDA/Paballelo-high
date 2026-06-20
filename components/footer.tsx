@@ -100,6 +100,9 @@ export function Footer() {
               &copy; {new Date().getFullYear()} Paballelo High School. {t.footer.rights}
             </p>
             <div className="flex items-center gap-6">
+              <Link href="/admin/login" className="hover:text-background transition-colors font-medium">
+                Admin Portal
+              </Link>
               <Link href="#" className="hover:text-background transition-colors">
                 {t.footer.privacy}
               </Link>

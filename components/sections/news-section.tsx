@@ -1,62 +1,58 @@
 'use client';
 
 import Link from 'next/link';
-import Image from 'next/image'; // 1. Imported Next.js Image component
-import { ArrowRight, Calendar } from 'lucide-react'; // Cleaned up unused icon imports
+import Image from 'next/image';
+import { ArrowRight, Calendar } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/context/language-context';
+import { useEffect, useState } from 'react';
 
-const newsItems = [
-  {
-    id: 0,
-    imageSrc: '/gallery/1.jpg', // 2. Swapped icon for a local image path
-    date: 'May 2026',
-    category: 'Celebration',
-    link: 'https://www.facebook.com/people/Paballelo-High-School/61558234076140/',
-    titleEn: 'Halala! Paballelo High School Celebrates Achievement - Join Our 659+ Community Followers',
-    titleXh: 'Halala! Isikolo Samabanga Aphakamileyo sasePaballelo Sibhiyozela Impumelelo - Joyina Abalandeli Abangaphezulu kwe-659',
-    titleAf: 'Halala! Paballelo Hoerskool Vier Prestasie - Sluit Aan by Ons 659+ Gemeenskapvolgelinge',
-    titleTn: 'Halala! Sekolo se Segolo sa Paballelo se Keteka Katlego - Kopana le Balatedi ba 659+ ba Setshaba',
-  },
-  {
-    id: 1,
-    imageSrc: '/gallery/11.jpg',
-    date: 'January 2025',
-    category: 'Achievement',
-    link: 'https://schoolsdigest.co.za/matriculation/paballelo-high-school-2025-matric-results/',
-    titleEn: '2024 Matric Success Celebration - 88.7% Pass Rate',
-    titleXh: 'Umbhiyozo Wempumelelo yeMatriki ka-2024 - Izinga Lokupasa lika-88.7%',
-    titleAf: '2024 Matriek Sukses Viering - 88.7% Slaagsyfer',
-    titleTn: 'Meletlo ya Katlego ya Matriki 2024 - Sekgala sa go Pasa sa 88.7%',
-  },
-  {
-    id: 2,
-    imageSrc: '/gallery/3.jpg',
-    date: 'May 2026',
-    category: 'Sports',
-    link: 'https://www.gov.za/news/speeches/deputy-minister-nonceba-mhlauli-cyber-lab-handover-paballelo-senior-secondary-school',
-    titleEn: 'Deputy Minister Nonceba Mhlauli: Cyber Lab handover at Paballelo Senior Secondary School',
-    titleXh: 'Usekela Mphathiswa uNonceba Mhlauli: Unikezelo lweLebhu yeCyber ePaballelo Senior Secondary School',
-    titleAf: 'Adjunkminister Nonceba Mhlauli: Oorhandiging van die Cyber-laboratorium by Paballelo Senior Sekondêre Skool',
-    titleTn: 'Motlatsa Tona Nonceba Mhlauli: Go neelwa ga Laboratori ya Cyber kwa Sekolong sa Paballelo Senior Secondary',
-  },
-  {
-    id: 3,
-    imageSrc: '/gallery/6.jpg',
-    date: 'September 2025',
-    category: 'Choir',
-    link: 'https://www.youtube.com/watch?v=GxGzbp1-ySA',
-    titleEn: 'Paballelo High School Choir is an award-winning ensemble renowned for its high-scoring performances at the South African Schools Choral Eisteddfod (SASCE)',
-    titleXh: 'Paballelo High School se koor is ’n bekroonde ensemble wat bekend is vir sy hoogs gegradeerde uitvoerings by die South African Schools Choral Eisteddfod (SASCE)',
-    titleAf: 'Ikwayara yasePaballelo High School liqela eliphumelele amabhaso elaziwayo ngokwenza kakuhle kakhulu kumakhuphiswano aphezulu eSouth African Schools Choral Eisteddfod (SASCE)',
-    titleTn: 'Khwaere ya Sekolo sa Paballelo High School ke setlhopha se se itsegeng ka ditlhompho se se itsiweng ka ditiragatso tse di fumanang maduo a a kwa godimo mo South African Schools Choral Eisteddfod (SASCE)',
-  },
-];
+interface NewsItem {
+  id: number;
+  imageSrc: string;
+  date: string;
+  category: string;
+  link: string;
+  titleEn: string;
+  titleXh: string;
+  titleAf: string;
+  titleTn: string;
+}
 
 export function NewsSection() {
   const { language, t } = useLanguage();
+  const [newsItems, setNewsItems] = useState<NewsItem[]>([]);
+  const [loading, setLoading] = useState(true);
 
-  const getTitle = (item: typeof newsItems[0]) => {
+  useEffect(() => {
+    async function fetchNews() {
+      try {
+        const response = await fetch('/api/admin/news');
+        const data = await response.json();
+        
+        // Transform the data to match the expected format
+        const transformed = data.map((item: any): NewsItem => ({
+          id: item.id,
+          imageSrc: item.image || '/gallery/1.jpg',
+          date: new Date(item.date).toLocaleDateString('en-ZA', { year: 'numeric', month: 'long' }),
+          category: item.category,
+          link: '/news',
+          titleEn: item.title,
+          titleXh: item.titleXh || item.title,
+          titleAf: item.titleAf || item.title,
+          titleTn: item.titleTn || item.title,
+        }));
+        setNewsItems(transformed);
+      } catch (error) {
+        console.error('Error loading news data:', error);
+      } finally {
+        setLoading(false);
+      }
+    }
+    fetchNews();
+  }, []);
+
+  const getTitle = (item: NewsItem) => {
     switch (language) {
       case 'xh':
         return item.titleXh;
@@ -84,7 +80,16 @@ export function NewsSection() {
 
         {/* News Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-          {newsItems.map((item) => (
+          {loading ? (
+            <div className="col-span-full text-center py-12">
+              <p className="text-muted-foreground">Loading news...</p>
+            </div>
+          ) : newsItems.length === 0 ? (
+            <div className="col-span-full text-center py-12">
+              <p className="text-muted-foreground">No news articles available at the moment.</p>
+            </div>
+          ) : (
+            newsItems.map((item) => (
             <article
               key={item.id}
               className="group p-6 rounded-2xl bg-card border border-border hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
@@ -127,13 +132,14 @@ export function NewsSection() {
                 <ArrowRight className="ml-1 h-3 w-3" />
               </Link>
             </article>
-          ))}
+            ))
+          )}
         </div>
 
         {/* View All */}
         <div className="text-center mt-12">
           <Button asChild variant="outline" className="border-border hover:bg-muted">
-            <Link href="https://www.facebook.com/people/Paballelo-High-School/61558234076140/" target="_blank" rel="noopener noreferrer">
+            <Link href="/news">
               {t.news.viewAll}
               <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
