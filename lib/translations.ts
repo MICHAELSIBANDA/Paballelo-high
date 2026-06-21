@@ -64,7 +64,7 @@ export const translations = {
       missionText: 'To provide accessible, quality education that empowers learners academically, socially, and morally while preparing them for higher education and the workplace.',
       vision: 'Our Vision',
       visionText: 'To become a center of educational excellence in the Northern Cape, producing responsible, disciplined, and successful citizens.',
-      learnMore: 'Learn More About Us',
+      learnMore: 'Read More',
     },
     // History
     history: {
@@ -231,7 +231,7 @@ export const translations = {
       missionText: 'Ukunikela imfundo efumanekayo nesemagqabini ekhuthaza abafundi ngokwemfundo, ngokwentlalo, nangokoziphatha ngelixa sibalungiselela imfundo ephakamileyo nendawo yokusebenza.',
       vision: 'Umbono Wethu',
       visionText: 'Ukuba yiziko lobuchule bemfundo eMntla Koloni, elivelisa abemi abanoxanduva, abanoziphatha, nabaphumeleleyo.',
-      learnMore: 'Funda Ngaphezulu Ngathi',
+      learnMore: 'Funda Ngaphezulu',
     },
     // History
     history: {
@@ -398,7 +398,7 @@ export const translations = {
       missionText: 'Om toeganklike, kwaliteit onderwys te verskaf wat leerders akademies, sosiaal en moreel bemagtig terwyl hulle voorberei word vir hoer onderwys en die werkplek.',
       vision: 'Ons Visie',
       visionText: 'Om n sentrum van opvoedkundige uitnemendheid in die Noord-Kaap te word, wat verantwoordelike, gedissiplineerde en suksesvolle burgers produseer.',
-      learnMore: 'Leer Meer Oor Ons',
+      learnMore: 'Leer Meer',
     },
     // History
     history: {
@@ -565,7 +565,7 @@ export const translations = {
       missionText: 'Go fana ka thuto e e fitlhelelang le e e boleng e e matlafatsang baithuti ka thuto, ka loago, le ka maitsholo fa re ba baakanyetsa thuto e e kwa godimo le lefelo la tiro.',
       vision: 'Pono ya Rona',
       visionText: 'Go nna lefelo la bokgoni jwa thuto mo Kapa Bokone, le le tlhagisang badudi ba ba ikarabelelang, ba ba laolwang, le ba ba atlegileng.',
-      learnMore: 'Ithute Gole Gontsi ka Rona',
+      learnMore: 'Ithute Gole Gontsi',
     },
     // History
     history: {
