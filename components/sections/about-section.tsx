@@ -61,7 +61,7 @@ export function AboutSection() {
             </div>
 
             <Button asChild className="mt-8 bg-primary hover:bg-primary/90 text-primary-foreground">
-              <Link href="#contact">
+              <Link href="/about">
                 {t.about.learnMore}
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
