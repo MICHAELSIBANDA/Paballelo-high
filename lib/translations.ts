@@ -77,9 +77,9 @@ export const translations = {
       subtitle: 'Comprehensive Curriculum for Success',
       description: 'Our academic programs are designed to challenge and inspire learners while preparing them for success in higher education and the workplace. We achieved an 86.7% matric pass rate in 2025.',
       subjects: 'Core Subjects',
-      subjectsList: ['Mathematics', 'Mathematical Literacy', 'Physical Sciences', 'Life Sciences', 'English', 'Afrikaans', 'Geography', 'History', 'Business Studies', 'Accounting', 'Economics', 'Tourism', 'CAT'],
+      subjectsList: ['Mathematics', 'Mathematical Literacy', 'Physical Sciences', 'Life Sciences', 'English', 'Afrikaans', 'IsiXhosa', 'Setswana', 'Geography', 'History', 'Business Studies', 'Accounting', 'Economics', 'Tourism', 'CAT'],
       extracurricular: 'Extra-curricular',
-      extracurricularList: ['Soccer', 'Netball', 'Athletics', 'Volleyball', 'Cross Country', 'Chess', 'Choir', 'Drama', 'Poetry', 'Debate', 'Traditional Dance', 'Public Speaking'],
+      extracurricularList: ['Soccer', 'Netball', 'Athletics', 'Volleyball', 'Rugby', 'Chess', 'Choir', 'Drama', 'Poetry', 'Debate', 'Traditional Dance', 'Public Speaking'],
       support: 'Academic Support Programs',
       supportList: ['Afternoon classes', 'Saturday classes', 'Matric camps', 'Career guidance', 'Study groups', 'Teacher mentorship'],
     },
@@ -147,6 +147,32 @@ export const translations = {
     principal: {
       title: 'Principal Message',
       message: 'Welcome to Paballelo High School, a school dedicated to empowering learners through education, discipline, leadership, and community values. We strive to create opportunities for every learner to succeed academically and socially.',
+    },
+    // Achievements
+    achievements: {
+      title: 'Achievements',
+      subtitle: 'Our Achievements',
+      description: 'Celebrating excellence in academics, sports, and personal development',
+      viewAll: 'View All Achievements',
+      category: {
+        academic: 'Academic',
+        extracurricular: 'Extra-Curricular',
+        student: 'Student',
+      },
+    },
+    // Staff
+    staff: {
+      title: 'Our Team',
+      subtitle: 'Meet Our Staff',
+      description: 'Dedicated professionals working together for educational excellence',
+      meetTeam: 'Meet Our Team',
+    },
+    // School Structure
+    schoolStructure: {
+      title: 'School Structure',
+      subtitle: 'Leadership',
+      description: 'Our school leadership team',
+      viewStaff: 'View Staff Page',
     },
   },
   xh: {
@@ -218,9 +244,9 @@ export const translations = {
       subtitle: 'Iikharikhulamu Ezipheleleyo Zempumelelo',
       description: 'Iinkqubo zethu zemfundo zenzelwe ukucela umngeni nokutshiswa kwabafundi ngelixa sibalungiselela impumelelo kwimfundo ephakamileyo nendawo yokusebenza. Sifumene izinga lokupasa lika-86.7% ngonyaka ka-2025.',
       subjects: 'Izifundo Ezisisiseko',
-      subjectsList: ['Imathematika', 'Ukufunda Kwemathematika', 'Isayensi Yezinto Eziphilayo', 'Isayensi Yobomi', 'IsiNgesi', 'IsiBhulu', 'IJografi', 'Imbali', 'Izifundo ZeShishini', 'I-Akhawunting', 'I-Ekonomi', 'Uhambo', 'CAT'],
+      subjectsList: ['Imathematika', 'Ukufunda Kwemathematika', 'Isayensi Yezinto Eziphilayo', 'Isayensi Yobomi', 'IsiNgesi', 'IsiBhulu', 'IsiXhosa', 'Setswana', 'IJografi', 'Imbali', 'Izifundo ZeShishini', 'I-Akhawunting', 'I-Ekonomi', 'Uhambo', 'CAT'],
       extracurricular: 'Imisebenzi Yangaphandle',
-      extracurricularList: ['Ibhola', 'Unetibholi', 'Ukugijima', 'Uvolibholi', 'Ukugijima Kwehlathi', 'Itshesi', 'Ikwayara', 'Idrama', 'Imibongo', 'Intetho', 'Umdaniso Wesintu', 'Ukuthetha Esidlangalaleni'],
+      extracurricularList: ['Ibhola', 'Unetibholi', 'Ukugijima', 'Uvolibholi', 'IRagbi', 'Itshesi', 'Ikwayara', 'Idrama', 'Imibongo', 'Intetho', 'Umdaniso Wesintu', 'Ukuthetha Esidlangalaleni'],
       support: 'Iinkqubo Zenkxaso Yemfundo',
       supportList: ['Iiklasi zasemva kwemini', 'Iiklasi zangeMgqibelo', 'Iikampu zeMatriki', 'Isikhokelo somsebenzi', 'Amaqela okufunda', 'Ukuxhaswa ngootitshala'],
     },
@@ -288,6 +314,32 @@ export const translations = {
     principal: {
       title: 'Umyalezo Wenqununu',
       message: 'Wamkelekile kwisikolo samabanga aphakamileyo sasePaballelo, isikolo esizinikele ekunikeni amandla abafundi ngemfundo, isidima, ubunkokeli, kunye namaxabiso oluntu.',
+    },
+    // Achievements
+    achievements: {
+      title: 'Izinto Esizifezileyo',
+      subtitle: 'Izinto Esizifezileyo',
+      description: 'Ibhiyozo zokuphumelela kwimfundo, imidlalo, nokukhula komntu',
+      viewAll: 'Jonga Zonke Izinto Esizifezileyo',
+      category: {
+        academic: 'Imfundo',
+        extracurricular: 'Imisebenzi Yangaphandle',
+        student: 'Umfundi',
+      },
+    },
+    // Staff
+    staff: {
+      title: 'Iqala Lethu',
+      subtitle: 'Jonga Abasebenzi Bethu',
+      description: 'Abasebenzi abazinikeleyo abasebenza kunye ukuphumelela kwimfundo',
+      meetTeam: 'Jonga Iqala Lethu',
+    },
+    // School Structure
+    schoolStructure: {
+      title: 'Ubume Besikolo',
+      subtitle: 'Abokhokheli',
+      description: 'Iqala labokhokheli besikolo sethu',
+      viewStaff: 'Jonga Ikhasa Labasebenzi',
     },
   },
   af: {
@@ -359,9 +411,9 @@ export const translations = {
       subtitle: 'Omvattende Kurrikulum vir Sukses',
       description: 'Ons akademiese programme is ontwerp om leerders uit te daag en te inspireer terwyl hulle voorberei word vir sukses in hoer onderwys en die werkplek. Ons het n 86.7% matriek slaagsyfer in 2025 behaal.',
       subjects: 'Kernvakke',
-      subjectsList: ['Wiskunde', 'Wiskundige Geletterdheid', 'Fisiese Wetenskappe', 'Lewenswetenskappe', 'Engels', 'Afrikaans', 'Geografie', 'Geskiedenis', 'Besigheidstudies', 'Rekeningkunde', 'Ekonomie', 'Toerisme', 'CAT'],
+      subjectsList: ['Wiskunde', 'Wiskundige Geletterdheid', 'Fisiese Wetenskappe', 'Lewenswetenskappe', 'Engels', 'Afrikaans', 'IsiXhosa', 'Setswana', 'Geografie', 'Geskiedenis', 'Besigheidstudies', 'Rekeningkunde', 'Ekonomie', 'Toerisme', 'CAT'],
       extracurricular: 'Buitemuurse',
-      extracurricularList: ['Sokker', 'Netbal', 'Atletiek', 'Vlugbal', 'Veldloop', 'Skaak', 'Koor', 'Drama', 'Poesie', 'Debat', 'Tradisionele Dans', 'Openbare Redevoering'],
+      extracurricularList: ['Sokker', 'Netbal', 'Atletiek', 'Vlugbal', 'Rugby', 'Skaak', 'Koor', 'Drama', 'Poesie', 'Debat', 'Tradisionele Dans', 'Openbare Redevoering'],
       support: 'Akademiese Ondersteuningsprogramme',
       supportList: ['Middagklasse', 'Saterdagklasse', 'Matriekkampe', 'Loopbaanvoorligting', 'Studiegroepe', 'Onderwysermentorskap'],
     },
@@ -429,6 +481,32 @@ export const translations = {
     principal: {
       title: 'Hoof se Boodskap',
       message: 'Welkom by Paballelo Hoerskool, n skool toegewy aan die bemagtiging van leerders deur onderwys, dissipline, leierskap en gemeenskapswaardes.',
+    },
+    // Achievements
+    achievements: {
+      title: 'Prestasies',
+      subtitle: 'Ons Prestasies',
+      description: 'Viering van uitnemendheid in akademie, sport en persoonlike ontwikkeling',
+      viewAll: 'Bekyk Alle Prestasies',
+      category: {
+        academic: 'Akademies',
+        extracurricular: 'Buitemuurs',
+        student: 'Leerder',
+      },
+    },
+    // Staff
+    staff: {
+      title: 'Ons Span',
+      subtitle: 'Ontmoet Ons Personeel',
+      description: 'Toegewyde professionele wat saamwerk vir akademiese uitnemendheid',
+      meetTeam: 'Ontmoet Ons Span',
+    },
+    // School Structure
+    schoolStructure: {
+      title: 'Skoolstruktuur',
+      subtitle: 'Leierskap',
+      description: 'Ons skool leierskapspan',
+      viewStaff: 'Bekyk Personeel Bladsy',
     },
   },
   tn: {
@@ -500,9 +578,9 @@ export const translations = {
       subtitle: 'Kharikhulamu e e Feletseng ya Katlego',
       description: 'Mananeo a rona a thuto a dirilwe go tlhatlosa le go kgothatsa baithuti fa re ntse re ba baakanyetsa katlego mo thutong e e kwa godimo le lefelo la tiro. Re fitlhetse sekgala sa go pasa sa 86.7% ka 2025.',
       subjects: 'Dithuto tsa Motheo',
-      subjectsList: ['Dipalo', 'Bokgoni jwa Dipalo', 'Saense ya Fisiki', 'Saense ya Bophelo', 'Sekgoa', 'Seaforikanse', 'Jeokerafi', 'Histori', 'Dithuto tsa Kgwebo', 'Akhaonteng', 'Ikonomi', 'Bojanala', 'CAT'],
+      subjectsList: ['Dipalo', 'Bokgoni jwa Dipalo', 'Saense ya Fisiki', 'Saense ya Bophelo', 'Sekgoa', 'Seaforikanse', 'IsiXhosa', 'Setswana', 'Jeokerafi', 'Histori', 'Dithuto tsa Kgwebo', 'Akhaonteng', 'Ikonomi', 'Bojanala', 'CAT'],
       extracurricular: 'Ditiro tsa Kwa Ntle',
-      extracurricularList: ['Bolo ya Dinao', 'Netball', 'Tsamaiso', 'Volleyball', 'Cross Country', 'Chess', 'Khwaere', 'Drama', 'Thothokiso', 'Ngangisano', 'Motantsho wa Setso', 'Go Bua mo Phatlhalatseng'],
+      extracurricularList: ['Bolo ya Dinao', 'Netball', 'Tsamaiso', 'Volleyball', 'Ragbi', 'Chess', 'Khwaere', 'Drama', 'Thothokiso', 'Ngangisano', 'Motantsho wa Setso', 'Go Bua mo Phatlhalatseng'],
       support: 'Mananeo a Tshegetso ya Thuto',
       supportList: ['Diklase tsa motshegare', 'Diklase tsa Sateretaga', 'Dikampo tsa Matriki', 'Kaelo ya Profešene', 'Ditlhopha tsa thuto', 'Tshegetso ya Barutabana'],
     },
@@ -511,7 +589,7 @@ export const translations = {
       title: 'Metshameko le Setso',
       subtitle: 'Re Tlhabolola Baithuti ba ba Feletseng',
       sports: 'Metshameko e e Fanwang',
-      sportsList: ['Bolo ya Dinao', 'Netball', 'Tsamaiso', 'Volleyball', 'Cross Country', 'Chess', 'Dikopano tsa Sekolo'],
+      sportsList: ['Bolo ya Dinao', 'Netball', 'Tsamaiso', 'Volleyball', 'Ragbi', 'Chess', 'Dikopano tsa Sekolo'],
       culture: 'Ditiro tsa Setso',
       cultureList: ['Khwaere', 'Drama', 'Thothokiso', 'Ngangisano', 'Motantsho wa Setso', 'Go Bua mo Phatlhalatseng', 'Meletlo ya Letsatsi la Boswa'],
     },
@@ -570,6 +648,32 @@ export const translations = {
     principal: {
       title: 'Molaetsa wa Mokaedi',
       message: 'O amogelesegile mo Sekolong se Segolo sa Paballelo, sekolo se se ikemiseditseng go matlafatsa baithuti ka thuto, taolo, boeteledipele, le ditlhokego tsa setshaba.',
+    },
+    // Achievements
+    achievements: {
+      title: 'Dikatlego',
+      subtitle: 'Dikatlego tsa Rona',
+      description: 'Go tshosang bokgoni mo thutong, metshameko le tlhabololo ya motho',
+      viewAll: 'Bona Dikatlego Tsotlhe',
+      category: {
+        academic: 'Thuto',
+        extracurricular: 'Ditiro tsa Kwa Ntle',
+        student: 'Moithuti',
+      },
+    },
+    // Staff
+    staff: {
+      title: 'Setlhopha sa Rona',
+      subtitle: 'Ikgolaganye le Barutabana ba Rona',
+      description: 'Baeteledipele ba ba dirisang mmogo go tlisa bokgoni jwa thuto',
+      meetTeam: 'Ikgolaganye le Setlhopha sa Rona',
+    },
+    // School Structure
+    schoolStructure: {
+      title: 'Tshemo ya Sekolo',
+      subtitle: 'Boeteledipele',
+      description: 'Setlhopha sa boeteledipele sa sekolo sa rona',
+      viewStaff: 'Bona Letlakala la Barutabana',
     },
   },
 };

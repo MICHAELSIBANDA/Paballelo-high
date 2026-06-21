@@ -37,7 +37,8 @@ export function Header() {
     { href: '/#academics', label: t.nav.academics },
     { href: '/#admissions', label: t.nav.admissions },
     { href: '/#news', label: t.nav.news },
-    { href: '/gallery', label: t.nav.gallery },
+    { href: '/#gallery', label: t.nav.gallery },
+    { href: '/#staff', label: 'Staff' },
     { href: '/#contact', label: t.nav.contact },
   ];
 

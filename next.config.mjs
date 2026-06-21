@@ -1,15 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   typescript: {
-    ignoreBuildErrors: true,
+    ignoreBuildErrors: false,
   },
   images: {
     unoptimized: true,
   },
-  // Completely disable all dev indicators
   devIndicators: {
     buildActivity: false,
-    buildActivityPosition: 'bottom-right',
   },
 }
 

@@ -140,7 +140,7 @@ export function NewsSection() {
         <div className="text-center mt-12">
           <Button asChild variant="outline" className="border-border hover:bg-muted">
             <Link href="/news">
-              {t.news.viewAll}
+              View All News
               <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
           </Button>

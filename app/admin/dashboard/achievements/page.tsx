@@ -4,60 +4,71 @@ import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Plus, Pencil, Trash2, Calendar } from 'lucide-react';
+import { Plus, Pencil, Trash2 } from 'lucide-react';
 
-interface NewsItem {
+interface AchievementItem {
   id: number;
-  title: string;
+  titleEn: string;
   titleXh: string;
   titleAf: string;
   titleTn: string;
-  date: string;
+  descriptionEn: string;
+  descriptionXh: string;
+  descriptionAf: string;
+  descriptionTn: string;
   category: string;
+  year: string;
   image: string;
-  excerpt: string;
-  excerptXh: string;
-  excerptAf: string;
-  excerptTn: string;
-  content: string;
-  contentXh: string;
-  contentAf: string;
-  contentTn: string;
+  date: string;
+  order: number;
   featured: boolean;
 }
 
-export default function AdminNewsPage() {
-  const [newsItems, setNewsItems] = useState<NewsItem[]>([]);
+export default function AdminAchievementsPage() {
+  const [achievements, setAchievements] = useState<AchievementItem[]>([]);
 
   useEffect(() => {
-    loadNewsItems();
+    loadAchievements();
   }, []);
 
-  const loadNewsItems = async () => {
+  const loadAchievements = async () => {
     try {
-      const response = await fetch('/api/admin/news');
+      const response = await fetch('/api/admin/achievements');
       const data = await response.json();
-      setNewsItems(data);
+      setAchievements(data);
     } catch (error) {
-      console.error('Error loading news:', error);
+      console.error('Error loading achievements:', error);
     }
   };
 
   const handleDelete = async (id: number) => {
-    if (!confirm('Are you sure you want to delete this news item?')) return;
+    if (!confirm('Are you sure you want to delete this achievement?')) return;
 
     try {
-      const response = await fetch('/api/admin/news', {
+      const response = await fetch('/api/admin/achievements', {
         method: 'DELETE',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ id }),
       });
 
       if (response.ok) {
-        await loadNewsItems();
+        await loadAchievements();
       }
     } catch (error) {
-      console.error('Error deleting news:', error);
+      console.error('Error deleting achievement:', error);
+    }
+  };
+
+  const getCategoryLabel = (category: string) => {
+    switch (category) {
+      case 'academic':
+        return 'Academic';
+      case 'extracurricular':
+        return 'Extra-Curricular';
+      case 'student':
+        return 'Student';
+      default:
+        return category;
     }
   };
 
@@ -65,43 +76,48 @@ export default function AdminNewsPage() {
     <div className="space-y-6">
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-3xl font-serif font-bold">News & Events</h1>
+          <h1 className="text-3xl font-serif font-bold">Achievements Management</h1>
           <p className="text-muted-foreground mt-2">
-            Manage school news and events
+            Manage school achievements and awards
           </p>
         </div>
-        <Link href="/admin/dashboard/news/add">
+        <Link href="/admin/dashboard/achievements/add">
           <Button className="bg-primary hover:bg-primary/90">
             <Plus className="h-4 w-4 mr-2" />
-            Add News
+            Add Achievement
           </Button>
         </Link>
       </div>
 
       <div className="grid gap-4">
-        {newsItems.map((item) => (
+        {achievements.map((item) => (
           <Card key={item.id}>
             <CardHeader>
               <div className="flex items-start justify-between">
                 <div className="flex-1">
                   <div className="flex items-center gap-2 mb-2">
                     <span className="text-xs font-medium px-2 py-1 rounded-full bg-primary/10 text-primary">
-                      {item.category}
+                      {getCategoryLabel(item.category)}
+                    </span>
+                    <span className="text-xs font-medium px-2 py-1 rounded-full bg-muted text-muted-foreground">
+                      {item.year}
                     </span>
                     {item.featured && (
-                      <span className="text-xs font-medium px-2 py-1 rounded-full bg-yellow-100 text-yellow-700">
+                      <span className="text-xs font-medium px-2 py-1 rounded-full bg-yellow-500/10 text-yellow-600">
                         Featured
                       </span>
                     )}
+                    <span className="text-xs font-medium px-2 py-1 rounded-full bg-muted text-muted-foreground">
+                      Order: {item.order}
+                    </span>
                   </div>
-                  <CardTitle className="text-xl">{item.title}</CardTitle>
-                  <CardDescription className="flex items-center gap-2 mt-1">
-                    <Calendar className="h-4 w-4" />
-                    {new Date(item.date).toLocaleDateString()}
+                  <CardTitle className="text-xl">{item.titleEn}</CardTitle>
+                  <CardDescription className="mt-1 line-clamp-2">
+                    {item.descriptionEn}
                   </CardDescription>
                 </div>
                 <div className="flex gap-2">
-                  <Link href={`/admin/dashboard/news/edit/${item.id}`}>
+                  <Link href={`/admin/dashboard/achievements/edit/${item.id}`}>
                     <Button size="sm" variant="outline">
                       <Pencil className="h-4 w-4" />
                     </Button>
@@ -112,14 +128,6 @@ export default function AdminNewsPage() {
                 </div>
               </div>
             </CardHeader>
-            <CardContent className="flex gap-4 items-start">
-              {item.image && (
-                <div className="h-20 w-32 shrink-0 overflow-hidden rounded-md border hidden sm:block">
-                  <img src={item.image} alt="" className="h-full w-full object-cover" />
-                </div>
-              )}
-              <p className="text-sm text-muted-foreground">{item.excerpt}</p>
-            </CardContent>
           </Card>
         ))}
       </div>

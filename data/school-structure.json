@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "name": "Principal",
+    "title": "Principal",
+    "nameEn": "Dr. John Smith",
+    "nameXh": "Dr. John Smith",
+    "nameAf": "Dr. John Smith",
+    "nameTn": "Dr. John Smith",
+    "image": "/gallery/1.jpg",
+    "order": 1,
+    "category": "administration"
+  },
+  {
+    "id": 2,
+    "name": "Deputy Principal",
+    "title": "Deputy Principal",
+    "nameEn": "Mrs. Sarah Johnson",
+    "nameXh": "Mrs. Sarah Johnson",
+    "nameAf": "Mrs. Sarah Johnson",
+    "nameTn": "Mrs. Sarah Johnson",
+    "image": "/gallery/2.jpg",
+    "order": 2,
+    "category": "administration"
+  },
+  {
+    "id": 3,
+    "name": "Vice Principal Academics",
+    "title": "Vice Principal Academics",
+    "nameEn": "Mr. Michael Brown",
+    "nameXh": "Mr. Michael Brown",
+    "nameAf": "Mr. Michael Brown",
+    "nameTn": "Mr. Michael Brown",
+    "image": "/gallery/3.jpg",
+    "order": 3,
+    "category": "administration"
+  },
+  {
+    "id": 4,
+    "name": "Vice Principal Student Affairs",
+    "title": "Vice Principal Student Affairs",
+    "nameEn": "Mrs. Emily Davis",
+    "nameXh": "Mrs. Emily Davis",
+    "nameAf": "Mrs. Emily Davis",
+    "nameTn": "Mrs. Emily Davis",
+    "image": "/gallery/4.jpg",
+    "order": 4,
+    "category": "administration"
+  }
+]

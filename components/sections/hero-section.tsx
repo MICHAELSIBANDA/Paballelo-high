@@ -59,7 +59,7 @@ export function HeroSection() {
               </Link>
             </Button>
             <Button asChild variant="outline" size="lg" className="px-8 h-12 text-base border-border hover:bg-muted">
-              <Link href="#news">{t.hero.secondary}</Link>
+              <Link href="#achievements">{t.hero.secondary}</Link>
             </Button>
           </div>
         </div>

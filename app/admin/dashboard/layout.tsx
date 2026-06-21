@@ -8,6 +8,9 @@ import {
   LayoutDashboard, 
   Newspaper, 
   Images, 
+  Users, 
+  Building2, 
+  Award,
   LogOut, 
   Menu,
   X
@@ -30,13 +33,16 @@ export default function AdminDashboardLayout({
 
   const handleLogout = () => {
     logoutAdmin();
-    router.push('/admin/login');
+    router.push('/');
   };
 
   const navItems = [
     { href: '/admin/dashboard', icon: LayoutDashboard, label: 'Dashboard' },
     { href: '/admin/dashboard/news', icon: Newspaper, label: 'News & Events' },
     { href: '/admin/dashboard/gallery', icon: Images, label: 'Gallery' },
+    { href: '/admin/dashboard/achievements', icon: Award, label: 'Achievements' },
+    { href: '/admin/dashboard/school-structure', icon: Building2, label: 'Leadership' },
+    { href: '/admin/dashboard/staff', icon: Users, label: 'Staff' },
   ];
 
   return (
