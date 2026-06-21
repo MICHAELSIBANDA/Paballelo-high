@@ -53,13 +53,13 @@ export function HeroSection() {
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 h-12 text-base">
-              <Link href="#about">
+              <Link href="/about">
                 {t.hero.cta}
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
             <Button asChild variant="outline" size="lg" className="px-8 h-12 text-base border-border hover:bg-muted">
-              <Link href="#achievements">{t.hero.secondary}</Link>
+              <Link href="/about">Learn More About Us</Link>
             </Button>
           </div>
         </div>

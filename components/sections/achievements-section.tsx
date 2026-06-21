@@ -101,7 +101,15 @@ export function AchievementsSection() {
   }
 
   if (achievements.length === 0) {
-    return null;
+    return (
+      <section id="achievements" className="py-20 md:py-28 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <div className="text-center py-12 text-muted-foreground">
+            No achievements available at this time.
+          </div>
+        </div>
+      </section>
+    );
   }
 
   return (
